@@ -141,6 +141,9 @@
   <ItemGroup>
     <ClCompile Include="ADS_Functor_Lambda_Exercises.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ExerciseFunctions.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
