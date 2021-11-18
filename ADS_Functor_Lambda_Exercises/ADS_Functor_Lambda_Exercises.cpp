@@ -1,3 +1,11 @@
+/*****************************************************************//**
+ * \file   ADS_Functor_Lambda_Exercises.cpp
+ * \brief  Selected solutions to two exercises to examine the usefulness
+ *	       of functors and lambdas *
+ * \author NMCG
+ * \date   November 2021
+ *********************************************************************/
+
 #include <iostream>
 #include <list>
 using namespace std;
