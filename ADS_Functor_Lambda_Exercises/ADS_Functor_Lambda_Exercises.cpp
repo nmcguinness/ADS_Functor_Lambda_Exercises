@@ -1,4 +1,5 @@
 #include <iostream>
+#include <list>
 using namespace std;
 
 void Functor_Exercise1();
@@ -37,6 +38,7 @@ Avoid using the STL and try to think of your own solution.
 
 void Functor_Exercise1()
 {
+	list<int> co2List = { 456, 471, 432, 400, 319, 307, 311 };
 }
 
 void Functor_Exercise2()
