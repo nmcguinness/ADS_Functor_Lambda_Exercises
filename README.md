@@ -19,7 +19,7 @@ last 10 deposits for a specific bank account.
 
 A deposit record is in the following form:
 
-**DepositRecord (id{string}, amount{double})**
+**DepositRecord (id:string, amount:double)**
 
 1. Write the code to search through a list of 10 deposits and return
    a list of all deposits where the deposit amount is X% above the average.

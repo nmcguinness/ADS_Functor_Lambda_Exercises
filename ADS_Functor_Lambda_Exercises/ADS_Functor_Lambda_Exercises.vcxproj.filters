@@ -23,5 +23,11 @@
     <ClInclude Include="ExerciseFunctions.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Exercise1_Version1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Exercise1_Version2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

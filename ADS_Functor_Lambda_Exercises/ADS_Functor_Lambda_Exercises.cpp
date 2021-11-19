@@ -8,27 +8,35 @@
 
 #include <iostream>
 #include <list>
+#include <algorithm>
+#include "Exercise1_Version1.h"
+#include "Exercise1_Version2.h"
+
 using namespace std;
 
-void Functor_Exercise1();
 void Functor_Exercise2();
 void Lambda_Exercise1();
 void Lambda_Exercise2();
 
 int main()
 {
-	cout << "Functor_Exercise1" << endl;
-	Functor_Exercise1();
+	cout << "Functor_Exercise1_Version1 - Simple method with all code contained within..." << endl;
+	Functor_Exercise1_Version1();
 
-	cout << "Functor_Exercise2" << endl;
-	Functor_Exercise2();
+	cout << "Functor_Exercise1_Version2 - Using functors to create resuable accumulators and filters..." << endl;
+	Functor_Exercise1_Version2();
 
-	cout << "Lambda_Exercise1" << endl;
-	Lambda_Exercise1();
+	//cout << "Functor_Exercise2" << endl;
+	//Functor_Exercise2();
 
-	cout << "Lambda_Exercise2" << endl;
-	Lambda_Exercise2();
+	//cout << "Lambda_Exercise1" << endl;
+	//Lambda_Exercise1();
+
+	//cout << "Lambda_Exercise2" << endl;
+	//Lambda_Exercise2();
 }
+
+#pragma region Functors
 
 /*
 Given the monthly CO2 readings from a city, write the code to perform the following:
@@ -42,12 +50,6 @@ list<int> co2List = {456, 471, 432, 400, 319, 307, 311};
 Use any C++ technique(s) that you have learned.
 Avoid using the STL and try to think of your own solution.
 */
-void Functor_Exercise1()
-{
-	list<int> co2List = { 456, 471, 432, 400, 319, 307, 311 };
-
-	//add your code here...
-}
 
 /*
 You work for a popular bank and are tasked with identifying fraudulent
@@ -94,6 +96,9 @@ void Functor_Exercise2()
 	//add your code here...
 }
 
+#pragma endregion
+
+#pragma region Lambdas
 void Lambda_Exercise1()
 {
 }
@@ -101,3 +106,5 @@ void Lambda_Exercise1()
 void Lambda_Exercise2()
 {
 }
+
+#pragma endregion
