@@ -7,12 +7,12 @@
 #include <sstream>
 using namespace std;
 
-//of course we can just sub-divide the code from Version 1 in to methods so lets do something more interesting
-
+//of course, if we want to keep this data together we can just sub-divide the code from Version 1 in to methods so lets do something more interesting
 struct Stats {
 	double sum, average, stdDev;
 };
 
+/// @brief Demos a functor inside an accumulator class which accumulates statistical data on ints passed by iterating through a data structure contains ints.
 class StatisticsAccumulator {
 private:
 	int count;
@@ -33,6 +33,9 @@ public:
 	double getSum() const { return this->sum; }
 	double getAverage() const { return this->sum / this->count; }
 
+	/// @brief Converts selected fields to string
+	/// @return string
+	/// @see https://www.cplusplus.com/reference/sstream/stringstream/stringstream/
 	string toString() const {
 		stringstream strStream;
 
@@ -49,6 +52,7 @@ public:
 	}
 };
 
+/// @brief Demos a functor inside an accumulator class which accumulates statistical data on ints passed by iterating through a data structure contains ints.
 class StdDevAccumulator {
 private:
 	int count;
@@ -69,6 +73,7 @@ public:
 	double getStdDev() const { return sqrt(sumSquares / count); }
 };
 
+/// @brief Demos a functor inside a filter class which filters data on ints passed by iterating through a data structure contains ints.
 class WithinRangeFilter {
 private:
 	double average;
