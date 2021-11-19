@@ -117,7 +117,7 @@ void Lambda_Exercise1()
 	auto printLambda = [](int value) { cout << value << endl; };
 	for_each(co2List.begin(), co2List.end(), printLambda);
 
-	//here's the same code using an inlined lambda (i.e. not stores in any variable e.g. printLambda)
+	//here's the same code using an inlined lambda (i.e. not stored in any variable e.g. printLambda)
 	for_each(co2List.begin(), co2List.end(), [](int value)
 		{
 			cout << value << endl;
@@ -128,10 +128,10 @@ void Lambda_Exercise1()
 	function<void(int)> printLambdaNoAuto = [](int value) { cout << value << endl; };
 	for_each(co2List.begin(), co2List.end(), printLambdaNoAuto);
 
-	//using the explicit definition of the print lambda we can now define a function that takes that lambda
+	//using the explicit definition of the print lambda we can now define a function (e.g. doSomething) that takes that lambda
 	doSomething(co2List, printLambdaNoAuto);
 
-	//now that we have a function (doSomething) that can accept functions we can even inline the lambda when we call the method
+	//now that we have a function (i.e. doSomething) that can accept functions we can even inline the lambda when we call the method
 	doSomething(co2List, [](int value) { cout << sqrt(value) << endl; });
 }
 
