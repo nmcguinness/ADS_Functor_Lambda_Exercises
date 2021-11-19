@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <list>
+#include <map>
 #include <algorithm>
 #include <string>
 #include <exception>
@@ -10,6 +11,16 @@ using namespace std;
 //of course, if we want to keep this data together we can just sub-divide the code from Version 1 in to methods so lets do something more interesting
 struct Stats {
 	double sum, average, stdDev;
+};
+
+class Accumulator {
+public:
+
+	int doSomething() const { return 1; }
+
+	//pure virtual function which means any inheriting class MUST provide a body for this function
+	virtual void reset() {
+	}
 };
 
 /// @brief Demos a functor inside an accumulator class which accumulates statistical data on ints passed by iterating through a data structure contains ints.
@@ -125,4 +136,15 @@ void Functor_Exercise1_Version2()
 	//any_of, none_of, for_each
 	auto filteredList = rangeFilter.getFilteredList();
 	for_each(filteredList.begin(), filteredList.end(), print);
+
+	//here's an advanced demo of how we could store our accumulators for re-use in our code
+	//NON-EXAMINABLE CONTENT FOLLOWS...
+	Accumulator average;
+	Accumulator stdDev;
+	map<string, Accumulator> accumulatorLookup;
+	accumulatorLookup["averageAcc"] = average;
+	accumulatorLookup["stdDevAcc"] = stdDev;
+	auto acc = accumulatorLookup["averageAcc"];
+	acc.reset();
+	acc.doSomething();
 }
